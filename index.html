@@ -1,0 +1,1062 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MGPG College BCA | Shrimadhopur</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f9ff;
+            color: #173d68;
+            line-height: 1.6;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: #0e4f8f;
+            color: white;
+            padding: 9px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: white;
+            min-height: 78px;
+            padding: 10px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 3px 15px rgba(0, 60, 120, 0.10);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* MG LOGO */
+        .mg-logo {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0b63ad, #1c8ee8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 900;
+            border: 4px solid #dceeff;
+            box-shadow: 0 5px 15px rgba(0, 92, 170, 0.25);
+        }
+
+        .brand-text h2 {
+            color: #0d5799;
+            font-size: 21px;
+            line-height: 1.1;
+        }
+
+        .brand-text p {
+            color: #777;
+            font-size: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #173d68;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0876d1;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 540px;
+            background:
+                linear-gradient(rgba(4, 57, 105, 0.72), rgba(5, 87, 151, 0.70)),
+                url("Snapchat-1941463062.jpg") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: white;
+        }
+
+        .hero-logo {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: white;
+            color: #0865ae;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 900;
+            border: 6px solid #dceeff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .hero h1 {
+            font-size: 43px;
+            margin-bottom: 12px;
+        }
+
+        .hero h3 {
+            font-size: 23px;
+            color: #dff2ff;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .hero-buttons {
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 25px;
+            margin: 5px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0865ae;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-blue {
+            background: #0b76cf;
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background: #075b9e;
+        }
+
+        /* QUICK INFO */
+        .quick-info {
+            width: 88%;
+            margin: -45px auto 60px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 70, 130, 0.12);
+            border-top: 4px solid #1786d8;
+        }
+
+        .info-card .icon {
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .info-card h3 {
+            color: #075d9f;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 75px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #075d9f;
+        }
+
+        .section-title p {
+            color: #777;
+            margin-top: 8px;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 70, 130, 0.18);
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: #075d9f;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #e5f3ff;
+            border-left: 5px solid #0b78cf;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 18px;
+        }
+
+        /* BCA CARD */
+        .course-card {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 22px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 70, 130, 0.12);
+            border: 1px solid #dceeff;
+        }
+
+        .course-card h3 {
+            color: #075d9f;
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        .course-card p {
+            color: #555;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .course-list div {
+            background: #edf7ff;
+            padding: 13px;
+            border-radius: 9px;
+        }
+
+        /* FACULTY */
+        .faculty-card {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 70, 130, 0.12);
+
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .faculty-photo {
+            flex: 0 0 260px;
+        }
+
+        .faculty-photo img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 5px solid #e1f2ff;
+        }
+
+        .faculty-info h2 {
+            color: #075d9f;
+            margin-bottom: 5px;
+        }
+
+        .faculty-info h4 {
+            color: #c18b16;
+            margin-bottom: 15px;
+        }
+
+        .faculty-info p {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* LAB */
+        .lab-box {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 70, 130, 0.12);
+        }
+
+        .lab-box img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+
+        .lab-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .lab-content h2 {
+            color: #075d9f;
+        }
+
+        .lab-content p {
+            color: #555;
+        }
+
+        /* STATS */
+        .stats {
+            background: #0d5d9e;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat h2 {
+            font-size: 38px;
+        }
+
+        .stat p {
+            color: #dff2ff;
+        }
+
+        /* NOTICE */
+        .notice-box {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 70, 130, 0.10);
+        }
+
+        .notice {
+            padding: 15px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .notice:last-child {
+            border-bottom: none;
+        }
+
+        .notice strong {
+            color: #075d9f;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 7px 20px rgba(0, 70, 130, 0.12);
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* CONTACT */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 70, 130, 0.10);
+        }
+
+        .contact-card h3 {
+            color: #075d9f;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            margin: 9px 0;
+            color: #555;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 18px;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #e3f3ff, #ffffff);
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #075d9f;
+            font-size: 32px;
+        }
+
+        .cta p {
+            margin: 10px auto 20px;
+            color: #666;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #073d6b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: #d9edff;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #1faa59;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 2000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .quick-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .topbar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .brand-text h2 {
+                font-size: 17px;
+            }
+
+            .mg-logo {
+                width: 50px;
+                height: 50px;
+                font-size: 21px;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .hero h3 {
+                font-size: 18px;
+            }
+
+            .quick-info {
+                width: 92%;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .course-list {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .faculty-photo {
+                flex: auto;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 240px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP CONTACT BAR -->
+    <div class="topbar">
+        <span>📍 Shrimadhopur, Sikar, Rajasthan</span>
+        <span>📞 01575-250770 &nbsp; | &nbsp; 📱 7568178343</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="brand">
+
+            <div class="mg-logo">
+                MG
+            </div>
+
+            <div class="brand-text">
+                <h2>MGPG COLLEGE</h2>
+                <p>Shrimadhopur • Sikar</p>
+            </div>
+
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#bca">BCA</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#lab">Computer Lab</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-logo">
+                MG
+            </div>
+
+            <h1>MAHATMA GANDHI P.G. COLLEGE</h1>
+
+            <h3>SHRIMADHOPUR • SIKAR • RAJASTHAN</h3>
+
+            <p>
+                Welcome to the official BCA section of Mahatma Gandhi P.G. College.
+                Learn, Grow and Build Your Future with Technology.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#bca" class="btn btn-primary">
+                    Explore BCA
+                </a>
+
+                <a href="#contact" class="btn btn-blue">
+                    Contact College
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK INFORMATION -->
+    <div class="quick-info">
+
+        <div class="info-card">
+            <div class="icon">🎓</div>
+            <h3>BCA Course</h3>
+            <p>Computer Applications</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">💻</div>
+            <h3>Computer Lab</h3>
+            <p>40 Seat Capacity</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">👩‍🏫</div>
+            <h3>Faculty</h3>
+            <p>Priyanka Sharma</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">📅</div>
+            <h3>Session</h3>
+            <p>2026 - 27</p>
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>About Our College</h2>
+            <p>Education • Knowledge • Technology</p>
+        </div>
+
+        <div class="about">
+
+            <div class="about-img">
+                <img src="Snapchat-1941463062.jpg"
+                     alt="MGPG College Shrimadhopur">
+            </div>
+
+            <div class="about-text">
+
+                <h2>MAHATMA GANDHI P.G. COLLEGE</h2>
+
+                <p>
+                    Mahatma Gandhi P.G. College, Shrimadhopur is located near
+                    Howda Mod, Ward No.- 6, Shrimadhopur, District-Sikar,
+                    Rajasthan.
+                </p>
+
+                <p>
+                    The college provides students with opportunities to develop
+                    academic knowledge, practical skills and computer education.
+                </p>
+
+                <div class="highlight">
+                    <strong>📚 BCA:</strong>
+                    A technology-focused course designed to develop computer
+                    and application skills.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BCA -->
+    <section id="bca">
+
+        <div class="section-title">
+            <h2>BCA Course</h2>
+            <p>Bachelor of Computer Applications</p>
+        </div>
+
+        <div class="course-card">
+
+            <h3>💻 Bachelor of Computer Applications</h3>
+
+            <p>
+                BCA is a computer-focused course that helps students learn
+                programming, web development, computer fundamentals and
+                modern digital technologies.
+            </p>
+
+            <div class="course-list">
+
+                <div>💻 Programming in C</div>
+                <div>🌐 Web Application Development</div>
+                <div>🖥️ Computer Fundamentals</div>
+                <div>🛒 E-Commerce Technologies</div>
+                <div>🧪 C Programming Lab</div>
+                <div>🔧 Computer Practical</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FACULTY -->
+    <section id="faculty">
+
+        <div class="section-title">
+            <h2>BCA Faculty</h2>
+            <p>Meet our faculty member</p>
+        </div>
+
+        <div class="faculty-card">
+
+            <!-- PRIYANKA PHOTO LEFT -->
+            <div class="faculty-photo">
+
+                <img src="IMG_20260909_172745.png"
+                     alt="Priyanka Sharma">
+
+            </div>
+
+            <!-- DETAILS RIGHT -->
+            <div class="faculty-info">
+
+                <h2>Priyanka Sharma</h2>
+
+                <h4>BCA Faculty</h4>
+
+                <p>
+                    👩‍🏫 Faculty Member
+                </p>
+
+                <p>
+                    💻 Department: Computer Applications
+                </p>
+
+                <p>
+                    📚 Special Focus: Computer & Technology Education
+                </p>
+
+                <p>
+                    🎓 Session: 2026-27
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPUTER LAB -->
+    <section id="lab">
+
+        <div class="section-title">
+            <h2>Computer Lab</h2>
+            <p>Practical Learning & Technology</p>
+        </div>
+
+        <div class="lab-box">
+
+            <img
+                src="Screenshot 2026-09-09 181947.png"
+                alt="Computer Laboratory">
+
+            <div class="lab-content">
+
+                <h2>💻 Modern Computer Laboratory</h2>
+
+                <p>
+                    Our Computer Lab provides students with a practical
+                    environment for programming, web development and
+                    computer-based learning.
+                </p>
+
+                <br>
+
+                <strong>🖥️ Capacity: 40 Seats</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>40+</h2>
+            <p>Lab Seats</p>
+        </div>
+
+        <div class="stat">
+            <h2>BCA</h2>
+            <p>Computer Course</p>
+        </div>
+
+        <div class="stat">
+            <h2>2026</h2>
+            <p>New Session</p>
+        </div>
+
+        <div class="stat">
+            <h2>MG</h2>
+            <p>College Brand</p>
+        </div>
+
+    </section>
+
+
+    <!-- NOTICES -->
+    <section>
+
+        <div class="section-title">
+            <h2>Latest Notices</h2>
+            <p>Important information for students</p>
+        </div>
+
+        <div class="notice-box">
+
+            <div class="notice">
+                📢 <strong>Session 2026-27</strong>
+                — Welcome to the new academic session.
+            </div>
+
+            <div class="notice">
+                💻 <strong>BCA Students</strong>
+                — Practical computer learning is an important part of the course.
+            </div>
+
+            <div class="notice">
+                🎓 <strong>College Updates</strong>
+                — Students should regularly check college notices.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section>
+
+        <div class="section-title">
+            <h2>College Gallery</h2>
+            <p>Campus & Learning Moments</p>
+        </div>
+
+        <div class="gallery">
+
+            <img src="Snapchat-1941463062.jpg"
+                 alt="College Photo">
+
+            <img src="IMG_20260909_172745.png"
+                 alt="Faculty Photo">
+
+            <img src="Snapchat-1941463062.jpg"
+                 alt="Computer Lab">
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMISSION CTA -->
+    <section class="cta">
+
+        <h2>Start Your Journey With BCA</h2>
+
+        <p>
+            Learn computer applications and develop your technology skills.
+        </p>
+
+        <a href="#contact" class="btn btn-blue">
+            Contact College
+        </a>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with MGPG College</p>
+        </div>
+
+        <div class="contact">
+
+            <div class="contact-card">
+
+                <h3>📍 College Address</h3>
+
+                <p>
+                    <strong>
+                        MAHATMA GANDHI P.G. COLLEGE, SHRIMADHOPUR
+                    </strong>
+                </p>
+
+                <p>
+                    Near Howda Mod, Ward No.- 6,
+                    Shrimadhopur,
+                    District-Sikar,
+                    Rajasthan - 332715
+                </p>
+
+                <p>
+                    📞 Phone: 01575-250770
+                </p>
+
+                <p>
+                    📱 Mobile: 7568178343
+                </p>
+
+                <p>
+                    📧 Email: mgpgcollegesmpr@gmail.com
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <iframe
+                    src="https://www.google.com/maps?q=MGPG+College+Shrimadhopur+Sikar+Rajasthan&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="mg-logo" style="margin: 0 auto 15px;">
+            MG
+        </div>
+
+        <h3>MAHATMA GANDHI P.G. COLLEGE</h3>
+
+        <p>
+            Shrimadhopur, District-Sikar, Rajasthan - 332715
+        </p>
+
+        <p>
+            © 2026 MGPG College. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+    <a
+        class="whatsapp"
+        href="https://wa.me/917568178343"
+        target="_blank"
+        title="Contact on WhatsApp">
+        ☎
+    </a>
+
+</body>
+</html>
+```
